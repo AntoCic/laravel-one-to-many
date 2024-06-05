@@ -14,6 +14,7 @@
           <tr>
             <th>Id</th>
             <th>name</th>
+            <th>type</th>
             <th>url</th>
             <th>stato</th>
           </tr>
@@ -23,6 +24,7 @@
             <tr>
               <td>{{ $project->id }}</td>
               <td>{{ $project->name }}</td>
+              <td>{{ $project->type->name }}</td>
               <td>{{ $project->url }}</td>
               <td>{{ $project->state }}</td>
             </tr>
