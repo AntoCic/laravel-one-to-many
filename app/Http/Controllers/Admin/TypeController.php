@@ -38,7 +38,7 @@ class TypeController extends Controller
         $name = Str::slug($form_data['name']);
         $slug = $name;
         do {
-            $find = Type::where('slug', $slug)->first(); // null | Post
+            $find = Type::where('slug', $slug)->first();
             if ($find !== null) {
                 $slug = $name . '-' . rand(1,99);
             }
@@ -75,15 +75,16 @@ class TypeController extends Controller
         $name = Str::slug($form_data['name']);
         $slug = $name;
         do {
-            $find = Type::where('slug', $slug)->first(); // null | Post
+            $find = Type::where('slug', $slug)->whereNot('id',$type->id)->first(); 
             if ($find !== null) {
                 $slug = $name . '-' . rand(1,99);
             }
         } while ($find !== null);
-
-        $form_data['slug'] = $slug;
         
+        $form_data['slug'] = $slug;
+
         $type->update($form_data);
+        dd($type);
         return to_route('admin.types.show', $type);
     }
 
