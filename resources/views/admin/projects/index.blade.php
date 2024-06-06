@@ -6,6 +6,7 @@
     <div class="container">
       <div class="d-flex justify-content-between align-items-center">
         <h1>Progetti</h1>
+        <a class="btn btn-outline-light" href="{{url('admin/projects/create')}}">➕</a>
       </div>
     </div>
     <div class="container">

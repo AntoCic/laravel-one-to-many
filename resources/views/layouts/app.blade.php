@@ -48,10 +48,10 @@
                         </li>
                         @auth
                             <li class="nav-item">
-                                <a class="nav-link" href="{{url('admin/projects')}}">Project</a>
+                                <a class="nav-link" href="{{url('admin/projects')}}">Progetti</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{url('admin/projects/create')}}">New Project</a>
+                                <a class="nav-link" href="{{url('admin/types')}}">Tipi</a>
                             </li>
                         @endif
                         
