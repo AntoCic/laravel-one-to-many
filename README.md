@@ -13,7 +13,7 @@
 - php artisan make:model NomeSingolarePrimaLetteraMaiuscola -a
 
 cancellare controller se nella cartella sbagliata
-- php artisan make:controller cartellaGiusta/PageController -r --model=ModelName
+- php artisan make:controller Admin/NameController -r --model=Name
 
 ## CMD utili
 - php artisan make:model NomeSingolarePrimaLetteraMaiuscola -a
