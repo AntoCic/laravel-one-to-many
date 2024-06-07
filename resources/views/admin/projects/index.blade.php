@@ -25,7 +25,7 @@
             <tr>
               <td>{{ $project->id }}</td>
               <td><a href="{{route('admin.projects.show', $project)}}">{{ $project->name }}</a></td>
-              <td>{{ $project->type->name }}</td>
+              <td>{{$project->type ? $project->type->name : 'Nessuna Tipologia selezionata'}}</td>
               <td>{{ $project->url }}</td>
               <td>{{ $project->state }}</td>
             </tr>

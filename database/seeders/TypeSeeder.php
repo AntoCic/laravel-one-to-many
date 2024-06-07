@@ -16,7 +16,8 @@ class TypeSeeder extends Seeder
     public function run(): void
     {
         // DB::table('types')->truncate();
-        $types = ['HTML', 'CSS','JavaScript','Bootstrap', 'Node', 'VUE', 'Vite', 'PHP', 'laravel'];
+        // $types = ['HTML', 'CSS','JavaScript','Bootstrap', 'Node', 'VUE', 'Vite', 'PHP', 'laravel'];
+        $types = ['FrontEnd', 'Backend', 'FullStack', 'Design', 'DevOps'];
         foreach ($types as $type) {
             $new_type = new Type();
             $new_type->name = $type;

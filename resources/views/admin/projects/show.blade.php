@@ -6,11 +6,8 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col">
-          <h1>
-            {{ $project->id }} - {{ $project->name }} 
-            <span class="badge text-bg-warning">
-              {{ $project->type->name }}
-            </span></h1>
+          <h1>{{ $project->id }} - {{ $project->name }} </h1>
+          <h4>{{$project->type ? $project->type->name : 'Sn Tipologia'}}</h4>
         </div>
         <div class="col-auto">
           
