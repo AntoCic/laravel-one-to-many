@@ -1,1 +1,10 @@
-@import '~bootstrap/scss/bootstrap'
+@import '~bootstrap/scss/bootstrap';
+
+.jamboo {
+    height: 300px;
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}

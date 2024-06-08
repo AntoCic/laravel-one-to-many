@@ -1,12 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h2 class="fs-4 text-secondary my-4">
-        {{ __('Dashboard') }}
-    </h2>
-    
+<div class="container">   
     <div class="row">
+
+        <div class="col-12 mb-3 jamboo">
+            <img src="https://cdn.dday.it/system/uploads/news/main_image/20186/main_Gifape.gif" alt="">
+        </div>
+
+        <div class="col-12">
+            <h2 class="fs-4 text-secondary my-3">
+                {{ __('Dashboard') }}
+            </h2>
+        </div>
+        
         <div class="col-12 mb-3">
             <div class="card">
                 <div class="card-header d-flex justify-content-between align-items-center"> 
@@ -38,5 +45,6 @@
             </div>
         </div>
     </div>
+
 </div>
 @endsection
