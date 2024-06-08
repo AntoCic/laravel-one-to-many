@@ -47,7 +47,7 @@ class TypeController extends Controller
         $form_data['slug'] = $slug;
 
         $type = type::create($form_data);
-        return to_route('admin.types.show', $type);
+        return to_route('admin.dashboard');
     }
 
     /**
@@ -84,8 +84,7 @@ class TypeController extends Controller
         $form_data['slug'] = $slug;
 
         $type->update($form_data);
-        dd($type);
-        return to_route('admin.types.show', $type);
+        return to_route('admin.dashboard');
     }
 
     /**
@@ -95,6 +94,6 @@ class TypeController extends Controller
     {
         $type->delete();
 
-        return to_route('admin.types.index');
+        return to_route('admin.dashboard');
     }
 }

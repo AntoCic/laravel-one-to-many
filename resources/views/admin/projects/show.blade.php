@@ -8,6 +8,11 @@
         <div class="col">
           <h1>{{ $project->id }} - {{ $project->name }} </h1>
           <h4>{{$project->type ? $project->type->name : 'Sn Tipologia'}}</h4>
+          <p>
+              @foreach ($project->technologies as $technology)
+                  <span class="badge text-bg-secondary">{{$technology->name}}</span>
+              @endforeach
+          </p>
         </div>
         <div class="col-auto">
           

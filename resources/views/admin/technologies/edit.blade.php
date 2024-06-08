@@ -6,10 +6,10 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col">
-          <h1 class="pt-3">Modifica Tipo</h1>
+          <h1 class="pt-3">Modifica Tecnologia</h1>
         </div>
         <div class="col-auto">
-          <form style="display:contents;" action="{{ route('admin.types.destroy', $type) }}" method="POST">
+          <form style="display:contents;" action="{{ route('admin.technologies.destroy', $technology) }}" method="POST">
             @method('DELETE')
             @csrf
             <button type="submit" class="btn btn-outline-danger">🗑️</button>
@@ -18,16 +18,17 @@
       </div>
     </div>
     <div class="container">
-      <form action="{{ route('admin.types.update',$type) }}" method="POST">
+      <form action="{{ route('admin.technologies.update',$technology) }}" method="POST">
         @method('PUT')
         @csrf
 
         <div class="mb-3">
           <label for="name" class="form-label">Nome</label>
-          <input type="text" class="form-control" name="name" id="name" placeholder="ex.CSS" value="{{ old('name',$type->name) }}">
+          <input type="text" class="form-control" name="name" id="name" placeholder="ex.CSS" value="{{ old('name',$technology->name) }}">
         </div>
 
         <button type="submit" class="btn btn-primary">Modifica</button>
+        
       </form>
 
       @if ($errors->any())

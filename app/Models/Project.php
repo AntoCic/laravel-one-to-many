@@ -11,6 +11,7 @@ class Project extends Model
 
     protected $fillable = [
         'name',
+        'slug',
         'url',
         'description',
         'state',
@@ -24,7 +25,7 @@ class Project extends Model
         return $this->belongsTo(Type::class);
     }
 
-    public function Technologies()
+    public function technologies()
     {
         return $this->belongsToMany(Technology::class);
     }

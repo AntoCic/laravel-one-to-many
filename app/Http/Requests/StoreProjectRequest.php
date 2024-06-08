@@ -24,11 +24,11 @@ class StoreProjectRequest extends FormRequest
         return [
             'name' => 'required|max:50|string',
             'url' => 'required|url:http,https',
-            'description' => 'max:1000',
+            'description' => 'nullable|max:1000',
             'state' => 'required|max:20|string',
             'priority' => 'required|integer',
             'date' => 'required|date',
-            'type_id' => 'exists:types,id'
+            'type_id' => 'nullable|exists:types,id'
         ];
     }
 }

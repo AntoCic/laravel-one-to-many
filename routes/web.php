@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ProjectController;
+use App\Http\Controllers\Admin\TechnologyController;
 use App\Http\Controllers\admin\TypeController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Project;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,7 +20,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $projects = Project::all();
+    return view('welcome', compact('projects'));
 });
 
 
@@ -26,12 +30,12 @@ Route::middleware(['auth', 'verified'])
 ->name('admin.')
 ->prefix('admin')
 ->group(function () {
-    Route::get('/', function () {
-        return view('admin.dashboard');
-    })->name('dashboard');
+    Route::get('/', [DashboardController::class, 'main'])->name('dashboard');
+    
     // Rotte protette
     Route::resource('projects', ProjectController::class);
     Route::resource('types', TypeController::class);
+    Route::resource('technologies', TechnologyController::class);
 }); 
 
 Route::middleware('auth')->group(function () {
