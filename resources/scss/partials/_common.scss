@@ -1,0 +1,25 @@
+@use './variables' as *;
+
+body {
+  font-family: $font-stack;
+}
+
+.app-bg{
+  background: rgb(48, 44, 44);
+  background: linear-gradient(190deg, rgba(48, 44, 44, 1) 19%, rgba(34, 30, 30, 1) 62%, rgba(98, 92, 92, 1) 100%);
+}
+
+.btn-st1 {
+  width: 50px;
+  color: white;
+
+  .material-symbols-rounded {
+    vertical-align: bottom;
+    padding: 0px;
+  }
+
+  &:hover {
+    background-color: var(--bs-secondary);
+  }
+
+}
